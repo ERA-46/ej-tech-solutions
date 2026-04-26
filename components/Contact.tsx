@@ -69,15 +69,19 @@ export default function Contact() {
           </div>
 
           <div className="bg-gray-800/30 p-6 sm:p-8 rounded-3xl border border-gray-700 backdrop-blur-sm">
-            <form className="space-y-4">
+            <form action="https://formspree.io/f/myklvdrj"
+                  method="POST"
+                  className="space-y-4">
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
+                  name="name"
                   type="text"
                   placeholder="Your Name"
                   className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
                 />
                 <input
+                  name="email"
                   type="email"
                   placeholder="Email Address"
                   className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
@@ -85,12 +89,14 @@ export default function Contact() {
               </div>
 
               <input
+                name="subject"
                 type="text"
                 placeholder="Subject (e.g., Web Design or IT Support)"
                 className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
               />
 
               <textarea
+                name="message"
                 rows={4}
                 placeholder="How can we help your business?"
                 className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
