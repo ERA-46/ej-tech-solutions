@@ -9,7 +9,6 @@ export default function ServiceArea() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           
-          {/* Text Content */}
           <div className="text-center lg:text-left">
             <div className="flex items-center justify-center lg:justify-start gap-2 text-orange-500 mb-2">
               <Navigation size={20} className="animate-pulse" />
@@ -21,7 +20,6 @@ export default function ServiceArea() {
             </p>
           </div>
 
-          {/* Location Badges */}
           <div className="flex flex-wrap justify-center gap-4 max-w-2xl">
             {mainCities.map((city) => (
               <div 
@@ -46,7 +44,6 @@ export default function ServiceArea() {
 
         </div>
         
-        {/* Trust Footer */}
         <div className="mt-10 pt-6 border-t border-gray-800 text-center">
           <p className="text-sm text-gray-500 italic">
             Do not see your area? <a href="#contact" className="text-orange-500 hover:underline">Contact us</a> to see if we can come to you.

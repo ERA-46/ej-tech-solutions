@@ -3,37 +3,37 @@ import { Monitor, Globe, ShieldCheck, CheckCircle2 } from "lucide-react";
 const serviceCategories = [
   {
     title: "IT Support",
-    description: "Reliable technical assistance for your business hardware and systems.", // [cite: 90, 91]
+    description: "Reliable technical assistance for your business hardware and systems.", 
     icon: <Monitor className="w-8 h-8 text-orange-500" />,
     items: [
-      "Computer & Laptop Setup", // [cite: 46, 92]
-      "Software Troubleshooting", // [cite: 47, 92]
-      "Virus & Malware Cleanup", // [cite: 49, 92]
-      "Custom PC Builds & Upgrades" // [cite: 51]
+      "Computer & Laptop Setup",
+      "Software Troubleshooting",
+      "Virus & Malware Cleanup",
+      "Custom PC Builds & Upgrades"
     ],
     accent: "border-orange-500"
   },
   {
     title: "Web Services",
-    description: "Modern, mobile-responsive websites designed to grow your online presence.", // [cite: 91, 94]
+    description: "Modern, mobile-responsive websites designed to grow your online presence.", 
     icon: <Globe className="w-8 h-8 text-blue-500" />,
     items: [
-      "Custom Business Websites", // [cite: 53, 94]
-      "Google Business Profile Setup", // [cite: 56, 95]
-      "SEO & Performance Optimization", // [cite: 55, 95]
-      "Website Maintenance" // [cite: 54]
+      "Custom Business Websites", 
+      "Google Business Profile Setup",
+      "SEO & Performance Optimization", 
+      "Website Maintenance"
     ],
     accent: "border-blue-500"
   },
   {
     title: "Ongoing Support",
-    description: "Peace of mind with monthly plans to keep your technology secure and updated.", // [cite: 57, 58]
+    description: "Peace of mind with monthly plans to keep your technology secure and updated.",
     icon: <ShieldCheck className="w-8 h-8 text-green-500" />,
     items: [
-      "Monthly IT & Web Support", // [cite: 58, 175]
-      "System & Data Backups", // [cite: 59, 60]
-      "Security Checks", // [cite: 60]
-      "Regular Software Updates" // [cite: 59]
+      "Monthly IT & Web Support",
+      "System & Data Backups",
+      "Security Checks",
+      "Regular Software Updates"
     ],
     accent: "border-green-500"
   }
@@ -78,6 +78,28 @@ export default function Services() {
           ))}
         </div>
       </div>
+      <div className="mt-16 bg-gray-90 border border-gray-100 rounded-2xl px-8 py-10 max-w-5xl mx-auto text-center">
+  <span className="inline-block text-2xl mb-3">🤝</span>
+  <h3 className="text-xl font-bold text-gray-800 mb-3">Community Discount Program</h3>
+  <p className="text-gray-500 text-sm leading-relaxed mb-6">
+    We believe technology should be accessible to everyone in our community.
+    That&apos;s why we offer reduced rates for seniors and students in Langley and Surrey.
+  </p>
+  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    <div className="flex-1 bg-white border border-gray-100 rounded-xl px-6 py-5 shadow-sm">
+      <p className="text-xl font-bold text-gray-800 mb-1">Seniors (65+)</p>
+      <p className="text-l font-medium text-gray-600">15% off</p>
+    </div>
+    <div className="flex-1 bg-white border border-gray-100 rounded-xl px-6 py-5 shadow-sm">
+      <p className="text-xl font-bold text-gray-800 mb-1">Students</p>
+      <p className="text-l font-medium text-gray-600">15% off</p>
+      <p className="text-xs text-gray-400 mt-1">Valid student ID required</p>
+    </div>
+  </div>
+  <p className="text-xs text-gray-400 mt-6">
+    Discounts apply to all services. Cannot be combined with other offers. Contact us to learn more.
+  </p>
+</div>
     </section>
   );
 }

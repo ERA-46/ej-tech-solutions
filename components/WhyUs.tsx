@@ -1,7 +1,7 @@
 export function WhyUs() {
   const features = [
     { title: "Local Expert", desc: "Based in Surrey, providing direct personal support." }, // cite: 69, 112
-    { title: "Academic Excellence", desc: "First-Class B.Sc. (Hons) in Software Engineering." }, // cite: 166, 169
+    { title: "Academic Excellence", desc: "PBD in Computer & Information Systems, B.Sc. (Hons) in Software Engineering." }, // cite: 166, 169
     { title: "Integrated Solutions", desc: "One partner for both your hardware and your website." }, // cite: 110
     { title: "Affordable & Clear", desc: "Transparent pricing with no tech jargon." } // cite: 112, 127
   ];
