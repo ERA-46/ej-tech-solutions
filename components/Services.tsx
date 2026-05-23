@@ -3,40 +3,42 @@ import { Monitor, Globe, ShieldCheck, CheckCircle2 } from "lucide-react";
 const serviceCategories = [
   {
     title: "IT Support",
-    description: "Reliable technical assistance for your business hardware and systems.", 
+    description: "Reliable technical assistance for your business hardware and systems.",
     icon: <Monitor className="w-8 h-8 text-orange-500" />,
     items: [
-      "Computer & Laptop Setup",
-      "Software Troubleshooting",
-      "Virus & Malware Cleanup",
-      "Custom PC Builds & Upgrades"
+      { label: "Computer & Laptop Setup", price: "$60 Onwards" },
+      { label: "Software Troubleshooting", price: "$50 Onwards" },
+      { label: "Virus & Malware Cleanup", price: "$70 Onwards" },
+      { label: "Custom PC Builds & Upgrades", price: "$80 Onwards" },
     ],
-    accent: "border-orange-500"
+    note: "Parts not included in build pricing.",
+    accent: "border-orange-500",
   },
   {
     title: "Web Services",
-    description: "Modern, mobile-responsive websites designed to grow your online presence.", 
+    description: "Modern, mobile-responsive websites designed to grow your online presence.",
     icon: <Globe className="w-8 h-8 text-blue-500" />,
     items: [
-      "Custom Business Websites", 
-      "Google Business Profile Setup",
-      "SEO & Performance Optimization", 
-      "Website Maintenance"
+      { label: "Custom Business Website", price: "$300 Onwards" },
+      { label: "Google Business Profile Setup", price: "$75 Onwards" },
+      { label: "SEO & Performance Optimization", price: "$100 Onwards" },
+      { label: "Website Maintenance", price: "$50 Onwards" },
     ],
-    accent: "border-blue-500"
+    note: "Final price depends on scope and complexity.",
+    accent: "border-blue-500",
   },
   {
     title: "Ongoing Support",
     description: "Peace of mind with monthly plans to keep your technology secure and updated.",
     icon: <ShieldCheck className="w-8 h-8 text-green-500" />,
     items: [
-      "Monthly IT & Web Support",
-      "System & Data Backups",
-      "Security Checks",
-      "Regular Software Updates"
+      { label: "Basic: Security & Updates", price: "$29/mo" },
+      { label: "Standard: Basic + Backups & Priority", price: "$49/mo" },
+      { label: "Full: Everything Included", price: "$99/mo" },
     ],
-    accent: "border-green-500"
-  }
+    note: "Monthly plans — cancel anytime.",
+    accent: "border-green-500",
+  },
 ];
 
 export default function Services() {
@@ -66,11 +68,16 @@ export default function Services() {
                 {category.description}
               </p>
 
-              <ul className="space-y-3">
+              <ul className="space-y-3 flex-1">
                 {category.items.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-700 text-md mb-8">
-                    <CheckCircle2 className="w-5 h-5 text-gray-400 shrink-0 group-hover:text-green-500 transition-colors" />
-                    <span>{item}</span>
+                  <li key={i} className="flex items-start justify-between gap-3 text-gray-700 text-sm">
+                    <div className="flex items-start gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-gray-400 shrink-0 mt-0.5 group-hover:text-green-500 transition-colors" />
+                      <span>{item.label}</span>
+                    </div>
+                    <span className="text-xs font-semibold text-gray-400 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+                      {item.price}
+                    </span>
                   </li>
                 ))}
               </ul>

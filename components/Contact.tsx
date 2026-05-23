@@ -1,6 +1,37 @@
+"use client";
+
 import { Mail, Phone, MessageSquare, Send } from "lucide-react";
+import { useState } from "react";
 
 export default function Contact() {
+
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("loading");
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch("https://formspree.io/f/myklvdrj", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
     <section
       id="contact"
@@ -69,46 +100,69 @@ export default function Contact() {
           </div>
 
           <div className="bg-gray-800/30 p-6 sm:p-8 rounded-3xl border border-gray-700 backdrop-blur-sm">
-            <form action="https://formspree.io/f/myklvdrj"
-                  method="POST"
-                  className="space-y-4">
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input
-                  name="name"
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
-                />
-                <input
-                  name="email"
-                  type="email"
-                  placeholder="Email Address"
-                  className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
-                />
+            {status === "success" ? (
+              <div className="flex flex-col items-center justify-center py-12 text-center gap-4">
+                <div className="w-14 h-14 rounded-full bg-orange-500/20 flex items-center justify-center">
+                  <Send className="text-orange-500" size={24} />
+                </div>
+                <h3 className="text-white text-xl font-bold">Message Sent!</h3>
+                <p className="text-gray-400 text-sm">We&nbsp;ll get back to you as soon as possible.</p>
+                <button
+                  onClick={() => setStatus("idle")}
+                  className="mt-2 text-sm text-orange-400 hover:text-orange-300 underline underline-offset-2 transition-colors"
+                >
+                  Send another message
+                </button>
               </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <input
+                    name="name"
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                    className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
+                  />
+                  <input
+                    name="email"
+                    type="email"
+                    placeholder="Email Address"
+                    required
+                    className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
+                  />
+                </div>
 
-              <input
-                name="subject"
-                type="text"
-                placeholder="Subject (e.g., Web Design or IT Support)"
-                className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
-              />
+                <input
+                  name="subject"
+                  type="text"
+                  placeholder="Subject (e.g., Web Design or IT Support)"
+                  required
+                  className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
+                />
 
-              <textarea
-                name="message"
-                rows={4}
-                placeholder="How can we help your business?"
-                className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
-              ></textarea>
+                <textarea
+                  name="message"
+                  rows={4}
+                  placeholder="How can we help your business?"
+                  required
+                  minLength={10}
+                  className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
+                ></textarea>
 
-              <button
-                type="submit"
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 sm:py-4 rounded-lg transition-all flex items-center justify-center gap-2"
-              >
-                Send Message <Send size={18} />
-              </button>
-            </form>
+                {status === "error" && (
+                  <p className="text-red-400 text-sm">Something went wrong. Please try again.</p>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={status === "loading"}
+                  className="w-full bg-orange-500 hover:bg-orange-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold py-3 sm:py-4 rounded-lg transition-all flex items-center justify-center gap-2"
+                >
+                  {status === "loading" ? "Sending..." : <> Send Message <Send size={18} /></>}
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </div>
