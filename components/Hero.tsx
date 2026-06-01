@@ -1,19 +1,39 @@
 export default function Hero() {
   return (
     <section className="relative w-full overflow-hidden bg-white mt-16 mb-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
-        
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
+
         <div className="max-w-2xl">
+
+          <div className="inline-block bg-orange-50 border border-orange-200 text-orange-600 text-xs font-semibold px-3 py-1 rounded-full mb-5 tracking-wide uppercase">
+            Serving Langley & Surrey
+          </div>
+
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 leading-tight mb-6 break-words">
-            IT <span className="text-orange-500">&</span> Web Solutions in{" "}
-            <span className="text-orange-500">
-              Langley <span className="text-gray-800">&</span> Surrey
-            </span>
+            Local IT <span className="text-orange-500">&</span> Web Services{" "}
+            <span className="text-orange-500">You Can Trust</span>
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-8 max-w-lg">
-            Reliable and affordable services to help small businesses operate efficiently and grow their online presence.
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 max-w-lg leading-relaxed">
+            EJ Tech Solutions helps small businesses in Langley and Surrey stay
+            running smoothly — from computer repairs and setup to custom websites
+            and ongoing tech support.
           </p>
+
+          <ul className="flex flex-col sm:flex-row gap-3 text-sm text-gray-600 mb-8">
+            <li className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span>
+              Remote & On-Site Support
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span>
+              No Contracts Required
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span>
+              Transparent Pricing
+            </li>
+          </ul>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <a
