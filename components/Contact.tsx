@@ -133,7 +133,7 @@ export default function Contact() {
                   <option value="" disabled className="text-gray-500">What can we help you with?</option>
                   <option value="IT Support">IT Support</option>
                   <option value="Web Services">Web Services</option>
-                  <option value="Ongoing Support Plan">Ongoing Support Plan</option>
+                  <option value="Ongoing Support Plan">Installation Services</option>
                   <option value="Other">Other</option>
                 </select>
 
