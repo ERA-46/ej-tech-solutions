@@ -235,8 +235,8 @@ export default function Portfolio() {
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Work</h2>
           <p className="text-gray-500 text-lg">
-            A look at websites we've built, issues we've solved, and devices
-            we've installed across Langley and Surrey.
+            A look at websites we&apos;ve built, issues we&apos;ve solved, and devices
+            we&apos;ve installed across Langley and Surrey.
           </p>
         </div>
 

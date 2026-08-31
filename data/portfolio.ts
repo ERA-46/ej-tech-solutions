@@ -29,29 +29,21 @@ export const portfolioItems: PortfolioItem[] = [
         "/portfolio/dashcam-install-1/img1.png",
         "/portfolio/dashcam-install-1/img2.png",
         "/portfolio/dashcam-install-1/img3.png",
-        "/portfolio/dashcam-install-1/img4.png",
+
         "/portfolio/dashcam-install-1/img5.png",
         "/portfolio/dashcam-install-1/img6.png",
         "/portfolio/dashcam-install-1/img7.png",
     ],
   },
-  {
-    id: 3,
-    category: "it",
-    title: "Job Title",
-    description: "Short one-line description of what you fixed or set up.",
-    images: [
-        "/portfolio/job1.png"
-    ],
-  },
-  {
-    id: 4,
-    category: "it",
-    title: "Job Title",
-    description: "Short one-line description of what you fixed or set up.",
-    images: [
-        "/portfolio/job2.png"
-    ],
-  },
+  // {
+  //   id: 3,
+  //   category: "it",
+  //   title: "Job Title",
+  //   description: "Short one-line description of what you fixed or set up.",
+  //   images: [
+  //       "/portfolio/job1.png"
+  //   ],
+  // },
+
 
 ];
