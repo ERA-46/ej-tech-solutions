@@ -229,7 +229,7 @@ export default function Portfolio() {
       : portfolioItems.filter((p) => p.category === active);
 
   return (
-    <section id="portfolio" className="py-24 bg-gray-50">
+    <section id="portfolio" className="py-12 mb-24 scroll-mt-16">
       <div className="max-w-6xl mx-auto px-6">
 
         <div className="text-center max-w-2xl mx-auto mb-12">

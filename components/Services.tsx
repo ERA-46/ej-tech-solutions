@@ -100,6 +100,33 @@ export default function Services() {
         </div>
       </div>
 
+      <div className="mt-12 max-w-6xl mx-auto px-6">
+        <div className="animate-border-glow relative overflow-hidden bg-gray-900 rounded-2xl px-8 py-12 text-center border border-orange-500/20">
+
+          {/* Animated background glow */}
+          <div className="animate-glow-pulse absolute top-0 left-1/2 w-96 h-40 bg-orange-500/30 blur-3xl rounded-full pointer-events-none" />
+          <div className="animate-glow-pulse absolute bottom-0 left-1/2 w-64 h-24 bg-orange-400/20 blur-2xl rounded-full pointer-events-none" style={{ animationDelay: "1.5s" }} />
+
+          <div className="relative z-10">
+            <span className="inline-block text-3xl mb-4">💡</span>
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+              Got an Idea? Let&apos;s Make It Happen.
+            </h3>
+            <p className="text-gray-400 text-base leading-relaxed max-w-xl mx-auto mb-8">
+              Whether it&apos;s a product, a tool, or just a concept on a napkin — we love
+              turning ideas into reality. We also do research and development, so don&apos;t
+              hold back. Bring us your wildest idea and let&apos;s talk.
+            </p>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl shadow-lg shadow-orange-500/30 hover:scale-105 transition-all duration-200"
+            >
+              Let&apos;s Talk 🚀
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div className="mt-16 max-w-6xl mx-auto px-6">
         <div className="border border-gray-100 rounded-2xl px-8 py-12 text-center shadow-sm">
           <span className="inline-block text-3xl mb-4">🤝</span>

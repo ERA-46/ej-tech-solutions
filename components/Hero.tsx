@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section id="hero" className="relative w-full overflow-hidden bg-white mt-16 mb-16">
+    <section id="hero" className="relative w-full overflow-hidden bg-white mt-16 mb-16 scroll-mt-24">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
 
         <div className="max-w-2xl">
@@ -51,12 +51,17 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="animate-fade-up opacity-0 delay-500 relative flex flex-col justify-center lg:justify-end items-center lg:items-end gap-6">
-          <img
-            src="/hero-img.png"
-            alt="Tech Support Illustration"
-            className="w-52 sm:w-64 md:w-80 lg:w-96 h-auto object-contain"
-          />
+        <div className="animate-fade-up delay-500 relative flex flex-col justify-center lg:justify-end items-center lg:items-end gap-6">
+          <div className="relative w-52 sm:w-64 md:w-80 lg:w-96">
+            {/* Glow */}
+            <div className="absolute inset-0 bg-orange-100/20 blur-3xl rounded-full pointer-events-none" />
+            {/* Image */}
+            <img
+              src="/hero-img.png"
+              alt="Tech Support Illustration"
+              className="animate-float relative z-10 w-full h-auto object-contain"
+            />
+          </div>
         </div>
 
       </div>

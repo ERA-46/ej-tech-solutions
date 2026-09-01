@@ -10,9 +10,7 @@ export default function ServiceArea() {
     "Cloverdale",
     "Fleetwood",
     "Newton",
-    "Whalley",
-    "South Surrey",
-    "White Rock",
+
   ];
 
   return (

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 
 const links = [
+  { label: "Home", href: "#hero" },
   { label: "Services", href: "#services" },
   { label: "Our Work", href: "#portfolio" },
   { label: "Why Us", href: "#why-us" },
@@ -107,15 +108,6 @@ export default function NavBar() {
               </a>
             ))}
           </div>
-
-          {/* DESKTOP CTA */}
-          <a
-            href="#contact"
-            onClick={(e) => handleClick(e, "#contact")}
-            className="hidden md:inline-flex items-center px-5 py-2 text-sm font-bold rounded-lg transition-all duration-300 bg-orange-500 hover:bg-orange-600 text-white shadow-md shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105"
-          >
-            Free Consultation
-          </a>
 
           {/* MOBILE SPACER */}
           <div className="md:hidden w-full" />
