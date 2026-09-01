@@ -10,7 +10,7 @@ import NavBar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <main className="p-10">
+    <main className="px-0">
       <NavBar />
       <Hero />
       <Services />
