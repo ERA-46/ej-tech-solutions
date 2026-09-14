@@ -4,6 +4,7 @@ import "./globals.css";
 import type { Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -81,6 +82,7 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -95,6 +97,7 @@ export default function RootLayout({
         {children}
         <Analytics />
         <SpeedInsights />
+        <GoogleAnalytics />
       </body>
     </html>
   );

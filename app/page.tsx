@@ -5,6 +5,7 @@ import {WhyUs} from "@/components/WhyUs";
 import ServiceArea  from "@/components/ServiceArea";
 import Portfolio from "@/components/Portfolio";
 import NavBar from "@/components/Navbar";
+import CookieBanner from "@/components/CookieBanner";
 // import Footer from "@/components/Footer";
 
 
@@ -18,6 +19,7 @@ export default function Home() {
       <ServiceArea />
       <WhyUs />
       <Contact />
+       <CookieBanner />
     </main>
   );
 }
