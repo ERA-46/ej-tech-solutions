@@ -74,8 +74,8 @@ export function WhyUs() {
             Not Just Another Help Desk
           </h2>
           <p className="text-gray-400 text-base leading-relaxed">
-            We&apos;re a local, hands-on technology partner committed to your business —
-            available when you need us, clear about what we do.
+            We&apos;re a local, hands-on technology partner committed to your business.
+            Available when you need us, clear about what we do.
           </p>
         </div>
 
@@ -87,10 +87,10 @@ export function WhyUs() {
               onMouseEnter={() => setHovered(f.title)}
               onMouseLeave={() => setHovered(null)}
               className={`relative group p-6 rounded-2xl border bg-white cursor-default
-  transition-all duration-300
-  ${f.border}
-  ${hovered === f.title ? `shadow-xl ${f.glow}` : "shadow-none border-gray-200"}
-`}
+            transition-all duration-300
+            ${f.border}
+            ${hovered === f.title ? `shadow-xl ${f.glow}` : "shadow-none border-gray-200"}
+          `}
             >
               {/* Gradient background on hover */}
               <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${f.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none`} />

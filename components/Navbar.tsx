@@ -39,13 +39,13 @@ export default function NavBar() {
     <>
       {/* NAVBAR */}
       <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        className={`fixed left-0 w-full z-50 transition-all duration-500 ${
           scrolled
             ? "bg-white/80 backdrop-blur-md shadow-lg shadow-black/5 border-white/20"
             : "bg-white backdrop-blur-sm"
         }`}
       >
-        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
 
           {/* DESKTOP LOGO */}
           <a
@@ -54,12 +54,11 @@ export default function NavBar() {
             className="hidden md:flex items-center gap-3 group"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-orange-500/30 rounded-full blur-md group-hover:blur-lg transition-all duration-300" />
-
+              <div className="absolute inset-0 bg-orange-500/30 rounded-full blur-md group-hover:blur-xl group-hover:scale-105 transition-all duration-300" />
               <img
                 src="/ej-tech.png"
                 alt="EJ Tech Solutions"
-                className="relative w-10 h-10 object-contain rounded-full ring-2 ring-orange-500/40 group-hover:ring-orange-500/70 transition-all duration-300"
+                className="relative w-15 h-15 object-contain rounded-full ring-2 ring-orange-500/40 group-hover:ring-orange-500/70 group-hover:scale-110 transition-all duration-300"
               />
             </div>
           </a>

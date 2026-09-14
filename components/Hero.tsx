@@ -3,35 +3,35 @@ export default function Hero() {
     <section id="hero" className="relative w-full overflow-hidden bg-white mt-16 mb-16 scroll-mt-24">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
 
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mb-6">
 
-          <div className="animate-fade-up opacity-0 inline-block bg-orange-50 border border-orange-200 text-orange-600 text-xs font-semibold px-3 py-1 rounded-full mb-5 tracking-wide uppercase">
-            Serving Langley & Surrey
-          </div>
+        <div className="animate-fade-up block w-fit mx-auto lg:mx-0 bg-orange-50 border border-orange-200 text-orange-600 text-xs font-semibold px-3 py-1 rounded-full mt-8 mb-8 tracking-wide uppercase">
+          Serving Langley & Surrey
+        </div>
 
           <h1 className="animate-fade-up opacity-0 delay-100 text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 leading-tight mb-6 break-words">
             Local IT <span className="text-orange-500">&</span> Web Services{" "}
             <span className="text-orange-500">You Can Trust</span>
           </h1>
 
-          <p className="animate-fade-up opacity-0 delay-200 text-base sm:text-lg md:text-xl text-gray-600 mb-6 max-w-lg leading-relaxed">
-            EJ Tech Solutions helps small businesses in Langley and Surrey stay
-            running smoothly — from computer repairs and setup to custom websites
-            and ongoing tech support.
+          <p className="animate-fade-up delay-200 text-base sm:text-lg md:text-xl text-gray-600 mb-6 max-w-lg leading-relaxed">
+            EJ Tech Solutions helps small businesses and individuals in Langley and Surrey
+            with IT support, professional websites, and device installations. Reliable,
+            affordable, and jargon-free.
           </p>
 
-          <ul className="animate-fade-up opacity-0 delay-300 flex flex-col sm:flex-row gap-3 text-sm text-gray-600 mb-8">
+          <ul className="animate-fade-up delay-300 flex flex-col sm:flex-row gap-3 text-sm text-gray-600 mb-8">
             <li className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span>
-              Remote & On-Site Support
+              IT Support & Repairs
             </li>
             <li className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span>
-              No Contracts Required
+              Websites & Web Services
             </li>
             <li className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span>
-              Transparent Pricing
+              Device Installations
             </li>
           </ul>
 

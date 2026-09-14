@@ -51,7 +51,7 @@ const serviceCategories = [
 export default function Services() {
   return (
     <section id="services" className="py-24">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6 mb-16">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">What We Offer</h2>
           <p className="text-lg text-gray-500">
@@ -64,8 +64,7 @@ export default function Services() {
           {serviceCategories.map((category, index) => (
             <div
               key={index}
-              className={`group relative p-8 bg-white rounded-2xl shadow-sm border-t-4 ${category.accent}
-                         hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col`}
+              className={`group relative p-8 bg-white rounded-2xl shadow-sm border-t-4 ${category.accent} hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col`}
             >
               <div className="mb-6 inline-block p-3 bg-gray-50 rounded-lg group-hover:scale-110 transition-transform">
                 {category.icon}
@@ -83,7 +82,7 @@ export default function Services() {
                       <CheckCircle2 className="w-5 h-5 text-gray-400 shrink-0 mt-0.5 group-hover:text-green-500 transition-colors" />
                       <span>{item.label}</span>
                     </div>
-                    <span className="text-xs font-semibold text-orange-400 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-xs font-semibold text-orange-400 whitespace-nowrap opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                       {item.price}
                     </span>
                   </li>
